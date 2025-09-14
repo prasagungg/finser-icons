@@ -1,0 +1,52 @@
+{
+  "name": "finser-icons",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/finser-icons.umd.js",
+  "module": "./dist/finser-icons.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/finser-icons.es.js",
+      "require": "./dist/finser-icons.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build:icons": "ts-node ./build-icons.ts",
+    "watch:icons": "chokidar 'icons/**/*.svg' -c 'npm run build:icons'",
+    "build": "npm run build:icons && vite build",
+    "preview": "vite preview",
+    "docs:dev": "npm run docs:build-page && vitepress dev docs",
+    "docs:build": "npm run docs:build-page && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "docs:build-page": "ts-node ./build-docs.ts"
+  },
+  "dependencies": {
+    "@svgr/plugin-jsx": "^8.1.0",
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@svgr/core": "^8.1.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.3.3",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.7.0",
+    "chokidar-cli": "^3.0.0",
+    "glob": "^11.0.3",
+    "svgo": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vitepress": "^1.6.4",
+    "vue-tsc": "^3.0.5"
+  }
+}
