@@ -25,7 +25,7 @@
     "docs:dev": "npm run docs:build-page && vitepress dev docs",
     "docs:build": "npm run docs:build-page && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:build-page": "ts-node ./build-docs.ts"
+    "docs:build-page": "ts-node --esm ./build-docs.ts"
   },
   "dependencies": {
     "@svgr/plugin-jsx": "^8.1.0",
