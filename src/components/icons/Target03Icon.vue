@@ -1,0 +1,3 @@
+<template>
+  <svg fill="currentColor" v-bind="$attrs" viewBox="0 0 24 24"><path d="M22 12h-4M6 12H2m10-6V2m0 20v-4m8-6a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-5 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</template>
