@@ -29,7 +29,12 @@ jobs:
         run: npm ci
 
       - name: Build documentation
-        run: npm run docs:build-page
+        run: npm run docs:build
+
+      - name: List files in the repository
+        run: |
+          echo "Listing all files..."
+          ls -R
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -37,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/.vitepress/dist
+          path: docs/.vitepress/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
