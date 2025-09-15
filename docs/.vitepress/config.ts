@@ -1,9 +1,9 @@
-// docs/.vitepress/config.ts
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
   title: "Finser Icons",
   description: "A beautiful icon library for Vue 3.",
+  base: "/finser-icons/",
 
   themeConfig: {
     logo: "/logo.svg",
